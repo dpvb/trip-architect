@@ -26,7 +26,8 @@ function PEPage() {
                     <p className="paragraph-content"><span className="font-bold">Customer: </span>Hmm, well, I'm willing to splurge a little for this trip. Let's say somewhere between $5,000 and $7,000 for the whole thing, flights and all.</p>
                     <h2 className="text-white font-semibold text-3xl">Task 1: Decoding Traveler Talk</h2>
                     <p className="paragraph-content">Now that you've interacted with Sarah, let's delve deeper into her travel preferences. You'll be asked various multiple choice questions to test whether you accurately extracted relevant details from the conversation above.</p>
-                    <MCQuestion 
+                    <MCQuestion
+                        question="Based on Sarah's description, what are her top travel priorities?"
                         answers={[
                             "A vacation centered entirely on relaxation.",
                             "Answer choice 2",

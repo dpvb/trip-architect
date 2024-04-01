@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 /* eslint-disable react/prop-types */
-function MCQuestion({ answers, correctIndex }) {
+function MCQuestion({ question, answers, correctIndex }) {
     const [clicked, setClicked] = useState(false);
 
     const handleClick = (index) => {
@@ -15,7 +15,7 @@ function MCQuestion({ answers, correctIndex }) {
 
     return (
         <div>
-            <h2 className="text-xl text-slate-200">Based on Sarah's description, what are her top travel priorities?</h2>
+            <h2 className="text-xl text-slate-200">{question}</h2>
             <div className="flex flex-col gap-3 mt-2">
                 {answers.map((answer, index) => (
                     <div key={index}>
