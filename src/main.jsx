@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import HomePage from './pages/HomePage.jsx'
+import PEPage from './pages/PEPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/trip-architect/prompt-engineering',
-    element: <h1>Prompt Engineering</h1>
+    element: <PEPage />
   },
   {
     path: '/trip-architect/response-evaluation',
