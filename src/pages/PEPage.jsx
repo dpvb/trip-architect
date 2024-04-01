@@ -3,13 +3,13 @@ import MCQuestion from "../components/MCQuestion";
 
 function PEPage() {
     return (
-        <div className="bg-gray-800 h-full">
+        <div className="bg-gray-800">
             <nav className="p-2 flex justify-between items-center bg-gray-900 shadow-lg">
-                <Link to="/trip-architect/" className="text-4xl font-bold bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-transparent">Trip Architect</Link>
+                <Link to="/" className="text-4xl font-bold bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-transparent">Trip Architect</Link>
                 <div className="flex gap-4">
-                    <Link to="/trip-architect/itinerary-optimization" className="text-blue-500 hover:text-blue-600 transition-all duration-200 ease-in-out">Itinerary Optimization</Link>
-                    <Link to="/trip-architect/prompt-engineering" className="text-blue-500 hover:text-blue-600 transition-all duration-200 ease-in-out font-bold">Prompt Engineering</Link>
-                    <Link to="/trip-architect/response-evaluation" className="text-blue-500 hover:text-blue-600 transition-all duration-200 ease-in-out">Response Evaluation</Link>
+                    <Link to="/itinerary-optimization" className="text-blue-500 hover:text-blue-600 transition-all duration-200 ease-in-out">Itinerary Optimization</Link>
+                    <Link to="/prompt-engineering" className="text-blue-500 hover:text-blue-600 transition-all duration-200 ease-in-out font-bold">Prompt Engineering</Link>
+                    <Link to="/response-evaluation" className="text-blue-500 hover:text-blue-600 transition-all duration-200 ease-in-out">Response Evaluation</Link>
                 </div>
             </nav>
             <main className="w-1/3 mx-auto mt-20 pb-20">
