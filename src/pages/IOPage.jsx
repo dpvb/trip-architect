@@ -16,15 +16,15 @@ function IOPage() {
             <main className="w-2/5 mx-auto mt-20 pb-20">
                 <div className="flex flex-col gap-4">
                     <h1 className="text-white font-bold text-5xl">Itinerary Optimization</h1>
-                    <p className="paragraph-content">Itinerary optimization more than just efficiently organizing travel schedules. It's about creating journeys that resonate on a personal level with travelers, offering them a harmonious blend of adventure, relaxation, and cultural immersion. Travel agents must search through a vast ocean of travel options to deliver these bespoke experiences. With the help of LLMs, which consume vast quantities of data, travel agents will be able to include visits to hidden gems and experiences that offer glimpses at local life. Let’s get ready to see how this works!</p>
+                    <p className="paragraph-content">Itinerary optimization is more than just efficiently organizing travel schedules. It's about creating journeys that resonate on a personal level with travelers, offering them a harmonious blend of adventure, relaxation, and cultural immersion. Travel agents must search through a vast ocean of travel options to deliver these bespoke experiences. With the help of LLMs, which consume vast quantities of data, travel agents will be able to include visits to hidden gems and experiences that offer glimpses at local life. Let’s get ready to see how this works!</p>
                     <img src={plane} alt="Plane going through mountains" className="w-[350px] mx-auto"/>
                     <h2 className="text-white font-semibold text-3xl">Case 1</h2>
                     <div className="bg-gray-900 p-2 rounded-md">
-                        <p className="paragraph-content">Jessica, a 35-year old adventurous solo traveler, is looking to explore the natural landscapes and cultural heritage of Japan over two weeks.</p>
+                        <p className="paragraph-content">Jessica, a 35-year-old adventurous solo traveler, is looking to explore the natural landscapes and cultural heritage of Japan over two weeks. As her travel agent, your job is to create the best itinerary that fits Jessica’s interests. There are many different factors to consider when crafting this itinerary. The following questions will guide you through the process of suggesting the perfect trip. Select the best answer to each question.</p>
                     </div>
                     <h2 className="text-white font-semibold text-3xl">Task 1: Determining Trip Details</h2>
                     <MCQuestion
-                        question="What pieces of information might the travel agent request?"
+                        question="What pieces of information might you request as the travel agent?"
                         answers={[
                             "Dates",
                             "Budget",
@@ -34,8 +34,18 @@ function IOPage() {
                         ]}
                         correctIndex={4}
                     />
+                    <MCQuestion
+                        question="Which of the following is Jessica least likely to be interested in based on her user profile?"
+                        answers={[
+                            "Cultural sites",
+                            "Food experiences",
+                            "Experiencing the outdoors",
+                            "Pokémon tea café"
+                        ]}
+                        correctIndex={3}
+                    />
                     <div className="bg-gray-900 p-2 rounded-md">
-                        <p className="paragraph-content"><span className="font-bold">Initial Input: </span>Jessica enters her preferences, including her interest in outdoor activities, cultural sites, food experiences, her budget, and her travel dates.</p>
+                        <p className="paragraph-content">Great job! Jessica has responded with her preferred travel dates, her budget, and her interest in outdoor activities, cultural sites and food experiences. Now, some of these categories, like outdoor activities and cultural sites, are still too broad. Some follow up questions might help in creating a more personalized trip.</p>
                     </div>
                     <h2 className="text-white font-semibold text-3xl">Task 2: Narrowing Down Interests</h2>
                     <MCQuestion
@@ -50,10 +60,40 @@ function IOPage() {
                         correctIndex={3}
                     />
                     <div className="bg-gray-900 p-2 rounded-md">
-                        <p className="paragraph-content"><span className="font-bold">Travel Agent: </span>Asks follow-up questions to narrow down preferences, such as "Do you prefer hiking or cycling?" and "Are you interested in attending any festivals?"</p>
-                        <p className="paragraph-content"><span className="font-bold">User Response: </span>Jessica responds stating that she prefers cycling and would love to attend any local festivals.</p>
-                        <p className="paragraph-content"><span className="font-bold">Travel Agent uses LLM: </span>Based on Jessica's inputs and its vast database of travel information, the LLM curates a personalized itinerary. It includes visits to the historic temples of Kyoto, cycling through the Shimanami Kaido, participating in a sushi-making class in Tokyo, and attending the Sapporo Snow Festival. The LLM also presents Jessica with other options, suggesting alternative activities, accommodations fitting her budget, and the best local dining spots, all woven into a seamless schedule. Jessica can then choose the trip options that sound the most appealing to her and the travel agent can help arrange the desired transportation and lodging.</p>
+                        <p className="paragraph-content">After asking Jessica whether she prefers hiking or cycling, she responds that although she enjoys both activities, she would rather spend time biking. When asked about her interest in any festivals, she says that she would love to attend a local festival to gain a better understanding of Japanese culture. With all this new information in hand, an LLM like ChatGPT can now give us some ideas for the perfect itinerary.</p>
                     </div>
+                    <h2 className="text-white font-semibold text-3xl">Task 3: Querying LLM for Trip Ideas</h2>
+                    <MCQuestion
+                        question="Which of the suggestions given by the LLM would fit Jessica’s ideal trip?"
+                        answers={[
+                            "Hiking up Mt. Fuji",
+                            "Cycling through the Shimanami Kaido",
+                            "Attending the Sapporo Snow Festival",
+                            "A & B only",
+                            "B & C only",
+                            "All of the above"
+                        ]}
+                        correctIndex={4}
+                    />
+                    <MCQuestion
+                        question="True or False: Jessica would enjoy the sushi-making class in Tokyo that ChatGPT also suggested?"
+                        answers={[
+                            "True",
+                            "False"
+                        ]}
+                        correctIndex={0}
+                    />
+                    <MCQuestion
+                        question="True or False: The historic temples in Kyoto would be a poor fit for Jessica’s trip itinerary?"
+                        answers={[
+                            "True",
+                            "False"
+                        ]}
+                        correctIndex={1}
+                    />
+                    <div className="bg-gray-900 p-2 rounded-md">
+                        <p className="paragraph-content">With all this information in mind, we can now provide Jessica with a travel itinerary. She will start her trip in Tokyo where she can participate in a sushi-making class. She will then travel north to Sapporo for the Sapporo Snow Festival. After attending the festival, she will then travel south to Kyoto to visit the historic temples located there. Finally, she will travel to Hiroshima, where she will be able to bike across the Shimanami Kaido. This itinerary will allow Jessica to explore all around Japan, while learning more about Japanese culture and participating in activities that interest her.</p>
+                    </div> 
                 </div>
             </main>
         </div>
