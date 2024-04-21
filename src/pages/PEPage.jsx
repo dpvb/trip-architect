@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import MCQuestion from "../components/MCQuestion";
 import beach from "../assets/beach.jpg";
 import safari from "../assets/safari.png";
+import mountain from "../assets/mountain.png";
+import lake from "../assets/lake.png";
+import savannah from "../assets/savannah.png";
+import books from "..//assets/books.png";
 
 function PEPage() {
     return (
@@ -18,6 +22,9 @@ function PEPage() {
                 <div className="flex flex-col gap-4">
                     <h1 className="text-white font-bold text-5xl">Prompt Engineering</h1>
                     <p className="paragraph-content">The travel industry is undergoing a transformation!  Language learning models (LLMs) are emerging as powerful tools to personalize trip planning for your clients.  But to unlock their full potential, you need to be an expert in crafting the right questions and prompts.  This interactive exercise will equip you with the skills to become a master "prompt engineer," allowing you to extract key details from customer conversations and translate them into effective LLM queries.  Get ready to dive deep, understand your clients' hidden desires, and design dream vacations that exceed their expectations!</p>
+                    <h2 className="text-white font-semibold text-3xl">What is Prompt Engineering?</h2>
+                    <p className="paragraph-content">A <span className="font-bold">prompt</span> in the context of using language models can be viewed as a question or instruction. It's what you provide to the program to guide it in performing a specific task. For travel agents like you, prompts can be requests like asking for the best hotels in a particular city or seeking an itinerary for a client's vacation.</p>
+                    <p className="paragraph-content"><span className="font-bold">Prompt engineering</span>, on the other hand, is the systematic process of creating well-crafted prompts that yield optimal results from the language models. It involves not just asking a question but carefully designing the language, structure, and content of the prompt. This ensures that the program understands the agent's intent accurately and provides the most relevant and useful information for travel planning. Essentially, prompt engineering is about fine-tuning how you communicate with the program to get the best outcomes for your clients.</p>
                     <img src={beach} alt="Woman on a beach" className="w-[350px] mx-auto"/>
                     <h2 className="text-white font-semibold text-3xl">Case 1: Sarah's Spa Escape for Relaxation and Renewal</h2>
                     <div className="bg-gray-900 p-2 rounded-md">
@@ -29,6 +36,7 @@ function PEPage() {
                         <p className="paragraph-content"><span className="font-bold">Travel Agent: </span>Great! Budget-wise, do you have a specific range in mind?</p>
                         <p className="paragraph-content"><span className="font-bold">Customer: </span>Hmm, well, I'm willing to splurge a little for this trip. Let's say somewhere between $5,000 and $7,000 for the whole thing, flights and all.</p>
                     </div>
+                    <img src={mountain} alt="Mountain" className="w-[350px] mx-auto"/>
                     <h2 className="text-white font-semibold text-3xl">Task 1: Decoding Sarah's Dream Escape</h2>
                     <p className="paragraph-content">Now that you've interacted with Sarah, it's time to become a travel industry Sherlock Holmes!  This is where your skills as a prompt engineer truly come into play.  By dissecting the conversation you just had, let's uncover the key details that will craft the perfect travel itinerary.</p>
                     <p className="paragraph-content">Your Mission: Become a travel agent detective and use the clues from the conversation to identify Sarah’s travel desires. Choose the BEST answer for each category.</p>
@@ -102,7 +110,7 @@ function PEPage() {
                         ]}
                         correctIndex={1}
                     />
-
+                    <img src={books} alt="Books" className="w-[350px] mx-auto"/>
                     <h2 className="text-white font-semibold text-3xl">Task 2: Be the Prompt Master!</h2>
                     <p className="paragraph-content">Now you've identified your client's travel desires, it's time to translate them into an LLM superpower! This step involves crafting the perfect prompt, a magic spell that unlocks a world of personalized travel options.</p>
                     <p className="paragraph-content">The provided prompt acts as a template, with key details missing. Here's the exciting part –  you'll fill in the blanks based on the keywords you extracted from the client conversation. Choose the BEST answer to fill in each blank of the provided template.</p>
@@ -178,6 +186,7 @@ function PEPage() {
                         <p className="paragraph-content"><span className="font-bold">Travel Agent: </span>Interesting! It sounds like you'd enjoy an African safari. Would you be interested in a more rustic camping experience or something with more luxurious accommodations?</p>
                         <p className="paragraph-content"><span className="font-bold">Customer: </span>Hmm, well, I'm definitely up for an adventure, but a comfortable bed and some good food wouldn't hurt either!</p>
                     </div>
+                    <img src={lake} alt="Lake" className="w-[350px] mx-auto"/>
                     <h2 className="text-white font-semibold text-3xl">Task 1: Decoding David's Wildlife Adventure</h2>
                     <p className="paragraph-content">Now that you've interacted with David, it's time to become a travel industry Sherlock Holmes!  This is where your skills as a prompt engineer truly come into play.  By dissecting the conversation you just had, let's uncover the key details that will craft the perfect travel itinerary.</p>
                     <p className="paragraph-content">Your Mission: Become a travel agent detective and use the clues from the conversation to identify David’s travel desires. Choose the BEST answer for each category.</p>
@@ -251,6 +260,7 @@ function PEPage() {
                         ]}
                         correctIndex={1}
                     />
+                    <img src={savannah} alt="Savannah" className="w-[350px] mx-auto"/>
                     <h2 className="text-white font-semibold text-3xl">Task 2: Be the Prompt Master!</h2>
                     <p className="paragraph-content">Now you've identified your client's travel desires, it's time to translate them into an LLM superpower! This step involves crafting the perfect prompt, a magic spell that unlocks a world of personalized travel options.</p>
                     <p className="paragraph-content">The provided prompt acts as a template, with key details missing. Here's the exciting part –  you'll fill in the blanks based on the keywords you extracted from the client conversation. Choose the BEST answer to fill in each blank of the provided template.</p>

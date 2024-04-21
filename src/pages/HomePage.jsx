@@ -11,6 +11,10 @@ function HomePage() {
                     <Link to="/prompt-engineering" className="block w-auto rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring transition-all duration-200 ease-in">Prompt Engineering</Link>
                     <Link to="/response-evaluation" className="block w-auto rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring transition-all duration-200 ease-in">Response Evaluation</Link>
                 </div>
+                <div className="mt-6 border-blue-600 border-[1px] w-[400px] mx-auto p-2 rounded-md">
+                    {/* <h2 className="text-lg text-gray-400">Purpose</h2> */}
+                    <p className="text-gray-400">At Trip Architect, we give trip advisors and planners the tools needed to better plan for customer's trips. Using generative AI and the skills you learn here, you will be able to use LLMs like ChatGPT to construct trip itineraries for any traveler! Take advantage of our 3 modules to learn how to integrate AI into your workflow to effectively craft a trip that your customers will love!</p>
+                </div>
             </div>
         </section>
     )
