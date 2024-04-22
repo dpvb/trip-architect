@@ -22,7 +22,7 @@ function REPage() {
                     <Link to="/response-evaluation" className="text-blue-500 hover:text-blue-600 transition-all duration-200 ease-in-out font-bold">Response Evaluation</Link>
                 </div>
             </nav>
-            <main className="lg:w-1/3 w-11/12 mx-auto mt-20 pb-20">
+            <main className="w-2/5 mx-auto mt-20 pb-20">
                 <div className="flex flex-col gap-4">
                     <h1 className="text-white font-bold text-5xl">Response Evaluation</h1>
                     <p className="paragraph-content">Once an itinerary is created, it is important to assure that the itinerary created will match to the person it is created for. In an industry which assures that people get itineraries that will precisely match their wants and needs, it is important that as travel agents, you are able to pick out what may not be necessary or incorrect in an itinerary. When we add ChatGPT and LLMs in the feedback loop, it is even more important that we know how to “check its work”. Thus, this module aims to teach and help you practice how to sift through a response from an LLM and evaluate how valid that response is. Let's get learning!</p>
